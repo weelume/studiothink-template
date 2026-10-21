@@ -100,7 +100,7 @@ function Footer({ basePath }: { basePath: string }) {
 }
 
 export function SiteShell({ basePath, locale = 'zh', children }: SiteTemplatePageProps & { children: ReactNode }) {
-  return <StudioThinkLocale.Provider value={locale}><div className="st-site"><Navigation basePath={basePath} /><main>{children}</main><Footer basePath={basePath} /><HostMarketplaceLink href="/templates" className="st-market-logo" aria-label={locale === 'zh' ? 'Studiothink · 模板首页' : 'Studiothink · Template home'}><HostLogo light={true} alt="" width="24" height="24" /><span>{locale === 'zh' ? 'Studiothink' : 'Studiothink'}</span></HostMarketplaceLink><Link className="st-skip" href="#main-content">{locale === 'zh' ? '跳转到正文' : 'Skip to content'}</Link></div></StudioThinkLocale.Provider>
+  return <StudioThinkLocale.Provider value={locale}><div className="st-site"><Navigation basePath={basePath} /><main>{children}</main><Footer basePath={basePath} /><HostMarketplaceLink href="/templates" className="st-market-logo" aria-label={locale === 'zh' ? 'Studiothink · 模板首页' : 'Studiothink · Template home'}><HostLogo light={true} alt="" width="24" height="24" /><span><HostBrandName /></span></HostMarketplaceLink><Link className="st-skip" href="#main-content">{locale === 'zh' ? '跳转到正文' : 'Skip to content'}</Link></div></StudioThinkLocale.Provider>
 }
 
 export function ProjectArrow() {
